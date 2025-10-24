@@ -1,5 +1,5 @@
 site:
-  name: AstroWind
+  name: MayDATA
   site: 'https://takkorg.github.io'
   base: '/maydata'
   trailingSlash: false
