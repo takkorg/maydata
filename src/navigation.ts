@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -19,10 +19,6 @@ export const headerData = {
       href: getPermalink('/founder'),
     },
     {
-      text: 'ブログ',
-      href: getBlogPermalink(),
-    },
-    {
       text: 'お問い合わせ',
       href: getPermalink('/contact'),
     },
@@ -37,14 +33,14 @@ export const footerData = {
       links: [
         { text: 'ニーズベースR&D', href: getPermalink('/#services') },
         { text: 'シーズベースR&D', href: getPermalink('/#services') },
-        { text: 'データエンジニアリング', href: getPermalink('/#services') },
+        { text: '不動産事業', href: getPermalink('/#services') },
       ],
     },
     {
       title: '会社情報',
       links: [
         { text: '会社概要', href: getPermalink('/about') },
-        { text: 'ブログ', href: getBlogPermalink() },
+        { text: '代表プロフィール', href: getPermalink('/founder') },
         { text: 'お問い合わせ', href: getPermalink('/contact') },
       ],
     },
@@ -54,7 +50,6 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/takkorg' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
     &copy; ${new Date().getFullYear()} 株式会社メイデータ (MayDATA Inc.) All rights reserved.
