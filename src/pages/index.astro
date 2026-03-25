@@ -4,9 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -16,12 +14,13 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Hero: スローガン・ビジョン -->
 
   <Hero
     tagline="Medical AI with Your DATA"
     actions={[
-      { text: '事業内容を見る', href: '#services' },
+      { text: '事業内容', href: '#services' },
+      { text: '会社概要', href: '/about' },
       { text: 'お問い合わせ', href: '/contact' },
     ]}
     image={{
@@ -35,84 +34,24 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      株式会社メイデータは、研究機関でのアカデミック研究開発と商用ベースのアプリケーション開発の両方の経験を持つチームにより、研究知見に裏打ちされた商用品質のAIアプリケーションを開発しています。
+      株式会社メイデータ (MayDATA Inc.)
     </Fragment>
   </Hero>
 
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: '設立', amount: '2023年' },
-      { title: '筆頭論文', amount: '9本' },
-      { title: '学会賞', amount: '4件' },
-      { title: '拠点', amount: '3箇所' },
-    ]}
-  />
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="services"
-    tagline="Services"
-    title="事業内容"
-    subtitle="医療AIの研究開発からデータ基盤の構築まで、アカデミアと産業界の橋渡しをする技術サービスを提供しています。"
-    columns={3}
-    items={[
-      {
-        title: 'ニーズベースR&D',
-        description:
-          'クライアントの課題に応じた研究開発・アプリケーション構築。国立研究機関向けBCI脳波解析プラットフォーム、大手企業向けリアルタイムデータ収集・BigQueryビッグデータ分析基盤など。',
-        icon: 'tabler:code',
-      },
-      {
-        title: 'シーズベースR&D',
-        description:
-          '研究機関の医療リアルワールドデータ(RWD)を用いたAIモデルの研究開発。北海道大学大学院医学院との連携による最先端の医療AI研究。',
-        icon: 'tabler:brain',
-      },
-      {
-        title: 'データエンジニアリング',
-        description:
-          'Google Cloud (BigQuery) を活用したビッグデータ分析基盤の設計・構築。パフォーマンスデータやバイオメカニクスデータのリアルタイム収集・分析。',
-        icon: 'tabler:database',
-      },
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
+  <!-- 会社の強み -->
 
   <Content
-    isReversed
     tagline="Strength"
-    title="研究と実装、その両方を。"
-    items={[
-      {
-        title: 'アカデミック研究開発の知見',
-        description:
-          '脳波解析(BCI)、医療リアルワールドデータ(RWD)を用いたAI研究など、学術的なバックグラウンドに基づく技術力。',
-      },
-      {
-        title: '商用品質のアプリケーション開発',
-        description:
-          'リクルートHD、プロスポーツチームでのデータ解析経験を活かした、安定した商用システムの設計・構築。',
-      },
-      {
-        title: '国の研究機関・大手企業からの受注実績',
-        description:
-          '国立研究機関向けプラットフォーム開発や、大手企業向けデータ基盤構築の実績。',
-      },
-    ]}
+    title="会社の強み"
     image={{
       src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
       alt: 'Data Analysis',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        研究と実装のトレードオフを超える
-      </h3>
-      アカデミック研究開発と商用アプリケーション開発は、通常トレードオフの関係にあります。メイデータはその両方を兼ね備えたチームで、このギャップを埋めます。
+      <p class="text-lg text-muted dark:text-slate-400">
+        研究機関でのアカデミック研究開発と、商用ベースの安定したアプリケーション開発は、通常トレードオフの関係にあります。メイデータはその両方の経験を持つチームにより、研究知見に裏打ちされた商用品質のアプリケーションを受託&自社開発しています。国の研究機関、大手企業からの受注実績があります。
+      </p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -120,100 +59,48 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- 事業の柱 -->
 
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Google Cloud / BigQuery',
-        description: 'ビッグデータの収集・蓄積・分析基盤をGoogle Cloud上に構築。リアルタイムデータパイプラインの設計・運用。',
-      },
-      {
-        title: 'AI / 機械学習',
-        description: 'PyTorch、TensorFlowを用いたAIモデルの研究開発。脳波解析、医療データ解析における深層学習の応用。',
-      },
-      {
-        title: 'フルスタック開発',
-        description: 'Webアプリケーション、モバイルアプリ、データダッシュボードなど、エンドツーエンドのシステム開発。',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Technology Stack',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        技術スタック
-      </h3>
-      Google Cloudを中心としたモダンな技術スタックで、スケーラブルなシステムを構築します。
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="代表プロフィール"
-    items={[
-      {
-        title: '筑波大学大学院 修了 <span class="font-medium">（研究科総代 / 主席）</span>',
-        description: '脳波からの意思抽出（BCI）研究。オーストリア・グラーツ工科大学への国費研究留学。',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'リクルートHD <span class="font-medium">データ解析職</span>',
-        description: 'リクルートテクノロジーズ ビッグデータ部にてデータサイエンティストとして従事。',
-        icon: 'tabler:chart-bar',
-      },
-      {
-        title: '北海道日本ハムファイターズ <span class="font-medium">アナリスト</span>',
-        description: 'チーム統轄本部にてパフォーマンスデータの分析・活用を担当。',
-        icon: 'tabler:ball-baseball',
-      },
-      {
-        title: '北海道大学大学院 医学院 <span class="font-medium">博士課程</span>',
-        description: 'ヘルスデータサイエンス教室にて、医療リアルワールドデータを用いたAI研究に従事。',
-        icon: 'tabler:stethoscope',
-      },
-      {
-        title: '株式会社メイデータ 設立',
-        description: '2023年4月。Medical AI with Your DATAを掲げ、医療AI研究開発×データエンジニアリングの領域で事業を展開。',
-        icon: 'tabler:rocket',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Founder Profile',
-    }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="拠点"
-    tagline="Locations"
+  <Features
+    id="services"
+    tagline="Business"
+    title="事業の柱"
     columns={3}
     items={[
       {
-        title: '北海道・釧路',
-        description: '本社所在地。夏は日本一涼しい環境で集中した開発を。',
-        icon: 'tabler:mountain',
+        title: 'A. ニーズベースR&D',
+        description:
+          'クライアントの課題に応じた研究開発・アプリケーション構築。国立研究機関向けBCI脳波解析プラットフォーム、大手企業向けパフォーマンス・バイオメカニクスデータのリアルタイム収集・BigQueryビッグデータ分析基盤など。',
+        icon: 'tabler:code',
       },
       {
-        title: '東京',
-        description: 'クライアントとの打ち合わせやビジネス拠点として。',
-        icon: 'tabler:building-skyscraper',
+        title: 'B. シーズベースR&D',
+        description:
+          '研究機関の医療リアルワールドデータ(RWD)を用いたAIモデルの研究開発。',
+        icon: 'tabler:brain',
       },
       {
-        title: '沖縄・恩納村',
-        description: '冬季の開発拠点。エンジニア合宿も定期開催。',
-        icon: 'tabler:beach',
+        title: 'C. 不動産事業（副次的収入源）',
+        description:
+          '健康をテーマにした働き方を目指すために、北海道(釧路)・東京・沖縄(恩納村)の多拠点で活動しており、それぞれの拠点で不動産を所有・運用・貸し出ししています。',
+        icon: 'tabler:building',
       },
+    ]}
+  />
+
+  <!-- 会社概要 -->
+
+  <Features2
+    tagline="Company"
+    title="会社概要"
+    columns={2}
+    items={[
+      { title: '会社名', description: '株式会社メイデータ (MayDATA Inc.)' },
+      { title: '設立', description: '2023年4月3日' },
+      { title: '代表', description: '兒玉拓巳' },
+      { title: '所在地', description: '北海道（釧路）、沖縄' },
+      { title: '事業内容', description: 'ソフトウェア開発、不動産事業' },
+      { title: '屋号の由来', description: 'Medical AI with Your DATA の頭文字' },
     ]}
   >
     <Fragment slot="bg">
@@ -221,7 +108,7 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- CallToAction Widget *********** -->
+  <!-- CTA -->
 
   <CallToAction
     actions={[

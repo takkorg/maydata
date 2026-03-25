@@ -1,9 +1,8 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -12,7 +11,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Hero -->
 
   <Hero tagline="About us">
     <Fragment slot="title">
@@ -21,158 +20,77 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Medical AI with Your DATA — 医療AI研究開発とデータエンジニアリングの融合により、研究知見に裏打ちされた商用品質のアプリケーションを開発しています。
+      Medical AI with Your DATA — 医療AI研究開発 × データエンジニアリング
     </Fragment>
   </Hero>
 
-  <!-- Stats Widget ****************** -->
+  <!-- 会社概要 -->
 
-  <Stats
-    stats={[
-      { title: '設立', amount: '2023年' },
-      { title: '筆頭論文（査読付）', amount: '9本' },
-      { title: '国際学会賞', amount: '4件' },
-      { title: '拠点数', amount: '3箇所' },
-    ]}
-  />
-
-  <!-- Content Widget: Company Info *** -->
-
-  <Content
+  <Features2
     tagline="Company"
     title="会社情報"
-    items={[
-      { title: '会社名', description: '株式会社メイデータ (MayDATA Inc.)' },
-      { title: '設立', description: '2023年4月3日' },
-      { title: '代表取締役', description: '兒玉拓巳' },
-      { title: '所在地', description: '北海道釧路市 / 東京 / 沖縄県恩納村' },
-      { title: '事業内容', description: 'ソフトウェア開発、医療AI研究開発、データエンジニアリング' },
-      { title: '屋号の由来', description: 'Medical AI with Your DATA の頭文字' },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80',
-      alt: 'Office',
-    }}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps2 Widget: CEO Profile ***** -->
-
-  <Steps2
-    title="代表取締役 兒玉拓巳"
-    subtitle="1991年北海道釧路市生まれ。筑波大学大学院修了後、リクルートHDでデータ解析、北海道日本ハムファイターズでアナリストを歴任。ファイターズ在籍中にスキルス胃がんを経験し、手術を受けた北大病院で医療リアルワールドデータを用いたAI研究に着手。在学中に株式会社メイデータを設立し、Medical AI with Your DATAを掲げ、医療AI研究開発×データエンジニアリングの領域で事業を展開。"
-    items={[
-      {
-        title: '釧路工業高等専門学校 情報工学科',
-        icon: 'tabler:school',
-      },
-      {
-        title: '筑波大学 情報学群情報科学類 卒業',
-        icon: 'tabler:school',
-      },
-      {
-        title: '筑波大学大学院 コンピュータサイエンス専攻 修了（研究科総代 / 主席）',
-        description: '脳波からの意思抽出（BCI）研究。Graz University of Technology（オーストリア）への国費研究留学。',
-        icon: 'tabler:award',
-      },
-      {
-        title: '株式会社リクルートホールディングス',
-        description: 'リクルートテクノロジーズ ビッグデータ部（データ解析職）',
-        icon: 'tabler:chart-bar',
-      },
-      {
-        title: '株式会社北海道日本ハムファイターズ',
-        description: 'チーム統轄本部（アナリスト）',
-        icon: 'tabler:ball-baseball',
-      },
-      {
-        title: '北海道大学大学院 医学院博士課程（2023年4月〜）',
-        description: 'ヘルスデータサイエンス教室。医療リアルワールドデータを用いたAI研究。',
-        icon: 'tabler:stethoscope',
-      },
-      {
-        title: '株式会社メイデータ 設立（2023年4月）',
-        icon: 'tabler:rocket',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget: Values ********** -->
-
-  <Steps2
-    title="働き方"
-    subtitle="29歳でスキルス胃がんを罹患し、命に関わる経験をした代表の「人生楽しまなければもったいない、健康でいたい」という思いから、多拠点ワークスタイルを実践しています。"
-    isReversed={true}
-    items={[
-      {
-        title: '夏: 北海道・釧路',
-        description: '日本一涼しい環境で、集中した開発作業を行います。',
-        icon: 'tabler:mountain',
-      },
-      {
-        title: '冬: 沖縄・恩納村',
-        description: '温暖なリゾート地で、エンジニア合宿も定期的に開催しています。',
-        icon: 'tabler:beach',
-      },
-      {
-        title: '春秋: 東京 + キャンピングカー',
-        description: 'クライアントワークと全国を巡りながらの開発を両立。',
-        icon: 'tabler:car',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Steps2>
-
-  <!-- Features2 Widget: Research ***** -->
-
-  <Features2
-    title="研究業績"
-    tagline="Research"
-    subtitle="筆頭著者論文9本（全て英文・査読あり）、共著論文6本、国際学会賞4件"
     columns={2}
     items={[
-      {
-        title: '脳波解析 (BCI) 研究',
-        description: '全身空間触覚刺激を用いたP300ベースのBrain-Computer Interface。IEEE EMBC、APSIPA ASCなど国際学会で発表。',
-        icon: 'tabler:brain',
-      },
-      {
-        title: '医療AI / 認知症モニタリング',
-        description: 'EEG/fNIRS/ETマルチモーダルデータ収集・クラウドストレージシステム。在宅高齢者向け認知症モニタリング研究。',
-        icon: 'tabler:heartbeat',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget: Locations **** -->
-
-  <Features2
-    title="拠点"
-    tagline="Locations"
-    columns={3}
-    items={[
-      {
-        title: '北海道・釧路',
-        description: '本社所在地',
-      },
-      {
-        title: '東京',
-        description: 'ビジネス拠点',
-      },
-      {
-        title: '沖縄・恩納村',
-        description: '冬季開発拠点',
-      },
+      { title: '会社名', description: '株式会社メイデータ (MayDATA Inc.)' },
+      { title: '設立', description: '2023年4月3日（登記申請日）' },
+      { title: '代表', description: '兒玉拓巳' },
+      { title: '所在地', description: '北海道（釧路）、沖縄' },
+      { title: '事業内容', description: 'ソフトウェア開発、不動産事業' },
+      { title: '屋号の由来', description: 'Medical AI with Your DATA の頭文字' },
     ]}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
+
+  <!-- 会社の強み -->
+
+  <Content
+    tagline="Strength"
+    title="会社の強み"
+    image={{
+      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Data Analysis',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-lg text-muted dark:text-slate-400">
+        研究機関でのアカデミック研究開発と、商用ベースの安定したアプリケーション開発は、通常トレードオフの関係にあります。メイデータはその両方の経験を持つチームにより、研究知見に裏打ちされた商用品質のアプリケーションを受託&自社開発しています。国の研究機関、大手企業からの受注実績があります。
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- 拠点 -->
+
+  <Features2
+    tagline="Locations"
+    title="拠点"
+    columns={2}
+    items={[
+      { title: '北海道（釧路）', description: '本社所在地' },
+      { title: '沖縄', description: '開発拠点' },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- 代表プロフィールへ -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '代表プロフィールを見る',
+        href: '/founder',
+      },
+    ]}
+  >
+    <Fragment slot="title">代表プロフィール</Fragment>
+    <Fragment slot="subtitle">
+      代表取締役 兒玉拓巳の経歴・研究業績はこちら
+    </Fragment>
+  </CallToAction>
 </Layout>

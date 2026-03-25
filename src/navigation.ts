@@ -15,6 +15,10 @@ export const headerData = {
       href: getPermalink('/about'),
     },
     {
+      text: '代表プロフィール',
+      href: getPermalink('/founder'),
+    },
+    {
       text: 'ブログ',
       href: getBlogPermalink(),
     },

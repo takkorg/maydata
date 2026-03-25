@@ -1,0 +1,158 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: '代表プロフィール — 兒玉拓巳',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- プロフィール文 -->
+
+  <Hero tagline="Founder">
+    <Fragment slot="title">
+      代表取締役<br />
+      <span class="text-accent dark:text-white">兒玉 拓巳</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      1991年北海道釧路市生まれ。筑波大学大学院修了後、リクルートHDでデータ解析、北海道日本ハムファイターズでアナリストを歴任。ファイターズ在籍中にスキルス胃がんを経験し、手術を受けた北大病院で医療リアルワールドデータを用いたAI研究に着手。在学中に株式会社メイデータを設立し、Medical AI with Your DATAを掲げ、医療AI研究開発 × データエンジニアリングの領域で事業を展開。
+    </Fragment>
+  </Hero>
+
+  <!-- 経歴 -->
+
+  <Steps2
+    title="経歴"
+    items={[
+      {
+        title: '1991年 北海道釧路市生まれ',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: '釧路工業高等専門学校 情報工学科',
+        icon: 'tabler:school',
+      },
+      {
+        title: '筑波大学 情報学群情報科学類 卒業',
+        icon: 'tabler:school',
+      },
+      {
+        title: '筑波大学大学院 システム情報工学研究科 コンピュータサイエンス専攻 修了（研究科総代=主席）',
+        description: '脳波からの意思抽出（BCI）研究。Graz University of Technology（オーストリア）への国費研究留学。',
+        icon: 'tabler:award',
+      },
+      {
+        title: '株式会社リクルートホールディングス 新卒入社',
+        description: 'リクルートテクノロジーズ ビッグデータ部配属（データ解析職）',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: '株式会社北海道日本ハムファイターズ チーム統轄本部（アナリスト）',
+        icon: 'tabler:ball-baseball',
+      },
+      {
+        title: '北海道大学大学院 医学院博士課程 ヘルスデータサイエンス教室（2023年4月〜2027年3月修了予定）',
+        icon: 'tabler:stethoscope',
+      },
+      {
+        title: '株式会社メイデータ 設立（2023年4月）',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+  <!-- ひとこと -->
+
+  <Features2
+    tagline="Message"
+    title="ひとこと"
+    columns={1}
+    items={[
+      {
+        description: '29歳でスキルス胃がんを罹患し、命に関わる経験をしました。人生楽しまなければもったいない、健康でいたいという思いから、夏は日本一涼しい北海道釧路市、冬は温暖なリゾート地沖縄県恩納村、春秋は東京の多拠点+キャンピングカーで全国を巡りながら働いています。各地で、エンジニアメンバーの合宿も定期的に開催しています。',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- 学会賞 -->
+
+  <Steps2
+    title="学会賞（4件）"
+    isReversed={true}
+    items={[
+      {
+        title: 'Best Poster Award',
+        description: 'The 10th AEARU Workshop on Computer Science and Web Technology (CSWT-2015), Tsukuba, Japan. (2015年2月)',
+        icon: 'tabler:trophy',
+      },
+      {
+        title: 'Student Travel Award',
+        description: 'The Sixth International Brain-Computer Interface Meeting, CA, USA. (2016年6月)',
+        icon: 'tabler:trophy',
+      },
+      {
+        title: 'Best Student Paper Award Finalist',
+        description: 'The 1st International Conference on Bio-engineering for Smart Technologies 2016 (BioSMART 2016), Dubai, UAE. (2016年12月)',
+        icon: 'tabler:trophy',
+      },
+      {
+        title: 'EMBS Student Paper Competition Finalist',
+        description: 'The 39th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC 2017), Jeju, Korea. (2017年7月)',
+        icon: 'tabler:trophy',
+      },
+    ]}
+  />
+
+  <!-- 研究業績 -->
+
+  <div class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold tracking-tight dark:text-white mb-2">研究業績</h2>
+    <p class="text-muted dark:text-slate-400 mb-8">筆頭著者論文（全て英文・査読あり）9本、共著論文6本</p>
+
+    <h3 class="text-xl font-bold dark:text-white mt-8 mb-4">修士論文</h3>
+    <ol class="list-decimal list-inside space-y-2 text-muted dark:text-slate-400">
+      <li>T. Kodama, "Full Body Spatial Vibrotactile Brain Computer Interface Paradigm," University of Tsukuba, Jan. 2017. (Dean Award / 研究科総代)</li>
+    </ol>
+
+    <h3 class="text-xl font-bold dark:text-white mt-8 mb-4">筆頭著者論文（全て英文・査読あり）9本</h3>
+    <ol class="list-decimal list-inside space-y-2 text-muted dark:text-slate-400 text-sm">
+      <li>T. Kodama, S. Makino and T.M. Rutkowski, "Spatial Tactile Brain-Computer Interface Paradigm Applying Vibration Stimuli to Large Areas of User's Back," in Proc. the 6th International Brain-Computer Interface Conference, Sep. 2014.</li>
+      <li>T. Kodama, S. Makino and T.M. Rutkowski, "Spatial Tactile Brain-Computer Interface by Applying Vibration to User's Shoulders and Waist," in Proc. the 10th AEARU Workshop on Computer Science and Web Technologies (CSWT-2015), Feb. 2015. (Best Poster Award)</li>
+      <li>T. Kodama, K. Shimizu and T.M. Rutkowski, "Full Body Spatial Tactile BCI for Direct Brain-robot Control," in Proc. the Sixth International Brain-Computer Interface Meeting, May 2016. (Student Travel Award)</li>
+      <li>T. Kodama, S. Makino and T.M. Rutkowski, "Toward a QoL improvement of ALS patients: Development of the Full-body P300-based Tactile Brain–Computer Interface," in Proc. AEARU YRIC-2016, Sep. 2016.</li>
+      <li>T. Kodama, K. Shimizu, S. Makino and T.M. Rutkowski, "Full–body Tactile P300–based Brain–computer Interface Accuracy Refinement," in Proc. BioSMART 2016, IEEE Press, Dec. 2016. (Student Best Paper Award Nomination)</li>
+      <li>T. Kodama, S. Makino and T.M. Rutkowski, "Tactile Brain-Computer Interface Using Classification of P300 Responses Evoked by Full Body Spatial Vibrotactile Stimuli," in Proc. APSIPA ASC 2016, IEEE Press, Dec. 2016.</li>
+      <li>T. Kodama and S. Makino, "Analysis of the brain activated distributions in response to full-body spatial vibrotactile stimuli using a tactile P300-based BCI paradigm," in Proc. IEEE BHI-2017, Feb. 2017.</li>
+      <li>T. Kodama and S. Makino, "Convolutional Neural Network Architecture and Input Volume Matrix Design for ERP Classifications in a Tactile P300–based Brain–Computer Interface," in Proc. IEEE EMBC 2017, Jul. 2017. (Student Best Paper Award Nomination)</li>
+      <li>T. Kodama, T.M. Rutkowski, T. Komendzinski, Y.M. Ito and M. Otake-Matsuura, "Multi-modal EEG/fNIRS/ET Data Collection and Cloud Storage System Prototype for the Elderly Home-based Dementia Monitoring," in Proc. IEEE EMBC 2023, Jul. 2023.</li>
+    </ol>
+
+    <h3 class="text-xl font-bold dark:text-white mt-8 mb-4">共著論文（全て英文・査読あり）6本</h3>
+    <ol class="list-decimal list-inside space-y-2 text-muted dark:text-slate-400 text-sm">
+      <li>T.M. Rutkowski, H. Mori, T. Kodama and H. Shinoda, "Airborne Ultrasonic Tactile Display Brain-computer Interface - A Small Robotic Arm Online Control Study," in Proc. CSWT-2015, Feb. 2015.</li>
+      <li>K. Shimizu, T. Kodama, P. Jurica, A. Cichocki and T.M. Rutkowski, "Tactile BCI Paradigms for Robots' Control," in Proc. SNR 2015, Mar. 2015.</li>
+      <li>T.M. Rutkowski, K. Shimizu, T. Kodama, P. Jurica, A. Cichocki and H. Shinoda, "Controlling a Robot with Tactile Brain-computer Interfaces," in Proc. Neuroscience 2015, Jul. 2015.</li>
+      <li>K. Shimizu, D. Aminaka, T. Kodama et al., "Brain-robot Interfaces Using Spatial Tactile and Visual BCI Paradigms," in Proc. BIH 2015, Sep. 2015.</li>
+      <li>T.M. Rutkowski, K. Shimizu, T. Kodama, P. Jurica and A. Cichocki, "Brain–robot Interfaces Using Spatial Tactile BCI Paradigms - Symbiotic Brain-robot Applications," in Lecture Notes in Computer Science, vol. 9359, Springer, Oct. 2015.</li>
+      <li>K. Shimizu, T. Kodama, S. Makino and T.M. Rutkowski, "Visual Motion Onset Virtual Reality Brain–computer Interface," in Proc. BioSMART 2016, IEEE Press, Dec. 2016.</li>
+    </ol>
+
+    <h3 class="text-xl font-bold dark:text-white mt-8 mb-4">学会発表</h3>
+    <ol class="list-decimal list-inside space-y-2 text-muted dark:text-slate-400 text-sm">
+      <li>兒玉拓巳 他, "触覚刺激駆動型BCIの開発と応用," 第3回脳神経外科BMI懇話会, Oct. 2016.</li>
+      <li>兒玉拓巳, 牧野昭二, "P300脳波解析における畳込みニューラルネットワークの応用," 第4回脳神経外科BMI懇話会, Nov. 2017.</li>
+      <li>兒玉拓巳, "20代胃がん患者が治療中に欲しかった「がん情報」," 第27回日本緩和医療学会学術大会, Jul. 2022.</li>
+      <li>T. Kodama et al., "Remote EEG Data Collection and Cloud Storage System Prototype for the Elderly Home-based Dementia Monitoring," MIRAI 2.0 R&I Week 2023, Umeå, Sweden, Nov. 2023.</li>
+      <li>上記筆頭著者論文 1〜3、9 においてポスター発表</li>
+      <li>上記筆頭著者論文 4〜8 において口頭発表</li>
+    </ol>
+  </div>
+</Layout>
