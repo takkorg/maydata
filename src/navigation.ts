@@ -45,12 +45,8 @@ export const footerData = {
       ],
     },
   ],
-  secondaryLinks: [
-    { text: 'プライバシーポリシー', href: getPermalink('/privacy') },
-  ],
-  socialLinks: [
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/takkorg' },
-  ],
+  secondaryLinks: [{ text: 'プライバシーポリシー', href: getPermalink('/privacy') }],
+  socialLinks: [{ ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/takkorg' }],
   footNote: `
     &copy; ${new Date().getFullYear()} 株式会社メイデータ (MayDATA Inc.) All rights reserved.
   `,
