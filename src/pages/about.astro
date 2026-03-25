@@ -1,228 +1,178 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: '会社概要',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="About us"
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
-    }}
-  >
+  <Hero tagline="About us">
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      株式会社メイデータ<br />
+      <span class="text-accent dark:text-white">MayDATA Inc.</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      Medical AI with Your DATA — 医療AI研究開発とデータエンジニアリングの融合により、研究知見に裏打ちされた商用品質のアプリケーションを開発しています。
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: '設立', amount: '2023年' },
+      { title: '筆頭論文（査読付）', amount: '9本' },
+      { title: '国際学会賞', amount: '4件' },
+      { title: '拠点数', amount: '3箇所' },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Content Widget: Company Info *** -->
 
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
+  <Content
+    tagline="Company"
+    title="会社情報"
     items={[
-      {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
+      { title: '会社名', description: '株式会社メイデータ (MayDATA Inc.)' },
+      { title: '設立', description: '2023年4月3日' },
+      { title: '代表取締役', description: '兒玉拓巳' },
+      { title: '所在地', description: '北海道釧路市 / 東京 / 沖縄県恩納村' },
+      { title: '事業内容', description: 'ソフトウェア開発、医療AI研究開発、データエンジニアリング' },
+      { title: '屋号の由来', description: 'Medical AI with Your DATA の頭文字' },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80',
+      alt: 'Office',
     }}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
-  <!-- Steps2 Widget ****************** -->
+  <!-- Steps2 Widget: CEO Profile ***** -->
 
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="代表取締役 兒玉拓巳"
+    subtitle="1991年北海道釧路市生まれ。筑波大学大学院修了後、リクルートHDでデータ解析、北海道日本ハムファイターズでアナリストを歴任。ファイターズ在籍中にスキルス胃がんを経験し、手術を受けた北大病院で医療リアルワールドデータを用いたAI研究に着手。在学中に株式会社メイデータを設立し、Medical AI with Your DATAを掲げ、医療AI研究開発×データエンジニアリングの領域で事業を展開。"
     items={[
       {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+        title: '釧路工業高等専門学校 情報工学科',
+        icon: 'tabler:school',
       },
       {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+        title: '筑波大学 情報学群情報科学類 卒業',
+        icon: 'tabler:school',
       },
       {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
+        title: '筑波大学大学院 コンピュータサイエンス専攻 修了（研究科総代 / 主席）',
+        description: '脳波からの意思抽出（BCI）研究。Graz University of Technology（オーストリア）への国費研究留学。',
         icon: 'tabler:award',
       },
+      {
+        title: '株式会社リクルートホールディングス',
+        description: 'リクルートテクノロジーズ ビッグデータ部（データ解析職）',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: '株式会社北海道日本ハムファイターズ',
+        description: 'チーム統轄本部（アナリスト）',
+        icon: 'tabler:ball-baseball',
+      },
+      {
+        title: '北海道大学大学院 医学院博士課程（2023年4月〜）',
+        description: 'ヘルスデータサイエンス教室。医療リアルワールドデータを用いたAI研究。',
+        icon: 'tabler:stethoscope',
+      },
+      {
+        title: '株式会社メイデータ 設立（2023年4月）',
+        icon: 'tabler:rocket',
+      },
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Steps2 Widget: Values ********** -->
 
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
+  <Steps2
+    title="働き方"
+    subtitle="29歳でスキルス胃がんを罹患し、命に関わる経験をした代表の「人生楽しまなければもったいない、健康でいたい」という思いから、多拠点ワークスタイルを実践しています。"
+    isReversed={true}
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: '夏: 北海道・釧路',
+        description: '日本一涼しい環境で、集中した開発作業を行います。',
+        icon: 'tabler:mountain',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: '冬: 沖縄・恩納村',
+        description: '温暖なリゾート地で、エンジニア合宿も定期的に開催しています。',
+        icon: 'tabler:beach',
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: '春秋: 東京 + キャンピングカー',
+        description: 'クライアントワークと全国を巡りながらの開発を両立。',
+        icon: 'tabler:car',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Steps2>
 
-  <!-- Features2 Widget ************** -->
+  <!-- Features2 Widget: Research ***** -->
 
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="研究業績"
+    tagline="Research"
+    subtitle="筆頭著者論文9本（全て英文・査読あり）、共著論文6本、国際学会賞4件"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+        title: '脳波解析 (BCI) 研究',
+        description: '全身空間触覚刺激を用いたP300ベースのBrain-Computer Interface。IEEE EMBC、APSIPA ASCなど国際学会で発表。',
+        icon: 'tabler:brain',
       },
       {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+        title: '医療AI / 認知症モニタリング',
+        description: 'EEG/fNIRS/ETマルチモーダルデータ収集・クラウドストレージシステム。在宅高齢者向け認知症モニタリング研究。',
+        icon: 'tabler:heartbeat',
       },
     ]}
   />
+
+  <!-- Features2 Widget: Locations **** -->
+
+  <Features2
+    title="拠点"
+    tagline="Locations"
+    columns={3}
+    items={[
+      {
+        title: '北海道・釧路',
+        description: '本社所在地',
+      },
+      {
+        title: '東京',
+        description: 'ビジネス拠点',
+      },
+      {
+        title: '沖縄・恩納村',
+        description: '冬季開発拠点',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 </Layout>
