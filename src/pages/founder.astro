@@ -12,15 +12,20 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- プロフィール文 -->
 
-  <Hero tagline="Founder">
+  <Hero
+    tagline="Founder"
+    image={{
+      src: '~/assets/images/founder.jpg',
+      alt: '兒玉拓巳',
+    }}
+  >
     <Fragment slot="title">
       代表取締役<br />
       <span class="text-accent dark:text-white">兒玉 拓巳</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      1991年北海道釧路市生まれ。筑波大学大学院修了後、リクルートHDでデータ解析、北海道日本ハムファイターズでアナリストを歴任。ファイターズ在籍中にスキルス胃がんを経験し、手術を受けた北大病院で医療リアルワールドデータを用いたAI研究に着手。在学中に株式会社メイデータを設立し、Medical
-      AI with Your DATAを掲げ、医療AI研究開発 × データエンジニアリングの領域で事業を展開。
+      1991年北海道釧路市生まれ。筑波大学大学院修了後、リクルートHDでデータ解析、北海道日本ハムファイターズでアナリストを歴任。ファイターズ在籍中にスキルス胃がんを経験し、手術を受けた北大病院で医療リアルワールドデータを用いたAI研究に着手。在学中に株式会社メイデータを設立し、Medical AI with Your DATAを掲げ、医療AI研究開発 × データエンジニアリングの領域で事業を展開。
     </Fragment>
   </Hero>
 
