@@ -31,9 +31,9 @@ export const footerData = {
     {
       title: '事業内容',
       links: [
-        { text: 'ニーズベースR&D', href: getPermalink('/#services') },
-        { text: 'シーズベースR&D', href: getPermalink('/#services') },
-        { text: '不動産事業', href: getPermalink('/#services') },
+        { text: '医療AIプロダクト開発', href: getPermalink('/#services') },
+        { text: '研究支援アプリ・データ基盤開発', href: getPermalink('/#services') },
+        { text: 'スポーツ・ヘルスケア事業', href: getPermalink('/#services') },
       ],
     },
     {
