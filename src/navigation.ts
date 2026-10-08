@@ -31,9 +31,9 @@ export const footerData = {
     {
       title: '事業内容',
       links: [
-        { text: '医療AIプロダクト開発', href: getPermalink('/#services') },
-        { text: '研究支援アプリ・データ基盤開発', href: getPermalink('/#services') },
-        { text: 'スポーツ・ヘルスケア事業', href: getPermalink('/#services') },
+        { text: '研究×商用開発', href: getPermalink('/#services') },
+        { text: 'スポーツ・ヘルスケア', href: getPermalink('/#services') },
+        { text: 'AIソリューション', href: getPermalink('/#services') },
       ],
     },
     {

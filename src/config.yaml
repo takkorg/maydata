@@ -11,7 +11,7 @@ metadata:
   title:
     default: MayDATA
     template: '%s — MayDATA'
-  description: '株式会社メイデータ — Medical AI with Your DATA. 医療AI研究開発×データエンジニアリング。研究知見に裏打ちされた商用品質のAIアプリケーションを開発しています。'
+  description: '株式会社メイデータ — スポーツ・ヘルスケア×データエンジニアリング。アスリートの体づくりや試合の戦略を支えるアプリケーション、研究支援のデータ基盤、AIによる業務支援を提供しています。'
   robots:
     index: true
     follow: true

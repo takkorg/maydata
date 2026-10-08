@@ -8,7 +8,7 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'MayDATA — Medical AI with Your DATA',
+  title: 'MayDATA — スポーツ・ヘルスケア × データエンジニアリング',
   ignoreTitleTemplate: true,
 };
 ---
@@ -17,7 +17,7 @@ const metadata = {
   <!-- Hero: スローガン・ビジョン -->
 
   <Hero
-    tagline="Medical AI with Your DATA"
+    tagline="Sports & Healthcare"
     actions={[
       { text: '事業内容', href: '#services' },
       { text: '会社概要', href: '/about' },
@@ -29,7 +29,7 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      医療AI研究開発 ×<br />
+      スポーツ・ヘルスケア ×<br />
       <span class="text-accent dark:text-white">データエンジニアリング</span>
     </Fragment>
 
@@ -66,22 +66,22 @@ const metadata = {
     columns={3}
     items={[
       {
-        title: '医療AIプロダクト開発',
+        title: '研究×商用開発',
         description:
-          '代表自身の抗がん剤治療の経験から、治療中の患者を支援するAIモデルを開発しています。患者が日々記録する体調データと医療リアルワールドデータ(RWD)をAIで統合解析し、副作用リスクの早期予測・検知を目指しています。実用化に向けた研究開発を進めています。',
-        icon: 'tabler:brain',
-      },
-      {
-        title: '研究支援アプリ・データ基盤開発',
-        description:
-          '過去に研究に従事した経験を活かし、研究所向けの遠隔脳波計測・会話支援システムなど、研究の知見を現場で使えるアプリケーションを開発しています。映像・音声・計測データをリアルタイムにやり取りするプラットフォームを構築し、研究と商用開発の両方の経験を活かして、安定した運用まで支えます。',
+          '研究に従事した経験を活かし、研究の知見を現場で使えるアプリケーションへとつなげています。研究所向けの計測・会話支援システムや、映像・音声・計測データをリアルタイムにやり取りするプラットフォームを開発し、商用品質の安定した運用まで支えます。',
         icon: 'tabler:database',
       },
       {
-        title: 'スポーツ・ヘルスケア事業',
+        title: 'スポーツ・ヘルスケア',
         description:
-          'プロスポーツチームに在籍していた経験を活かし、アスリートの体づくりから試合の戦略までを支えるアプリケーションとデータ基盤を開発しています。身体・動作・競技の計測データを統合・可視化し、選手や指導者が日々のトレーニングや試合に役立てられる環境をつくります。',
+          'スポーツチームでの開発経験を活かし、アスリートの体づくりから試合の戦略までを支えるアプリケーションとデータ基盤を開発しています。身体・動作・競技の計測データを統合・可視化し、選手や指導者が日々のトレーニングや試合に役立てられる環境をつくります。',
         icon: 'tabler:activity',
+      },
+      {
+        title: 'AIソリューション',
+        description:
+          '2010年代からリクルートで機械学習（現在のAIにつながる技術）を活用したプロダクトに携わってきた経験を活かし、AIによるさまざまな業務支援を行っています。業務に合わせたアプリケーション開発とデータ活用を通じて、日々の業務を支えます。',
+        icon: 'tabler:briefcase',
       },
     ]}
   />
@@ -97,8 +97,7 @@ const metadata = {
       { title: '設立', description: '2023年4月3日(登記申請日)' },
       { title: '代表', description: '兒玉拓巳' },
       { title: '所在地', description: '北海道(釧路市)、沖縄県(恩納村)' },
-      { title: '事業内容', description: '医療AI、研究支援アプリ・データ基盤開発、スポーツ・ヘルスケア' },
-      { title: '屋号の由来', description: 'Medical AI with Your DATA の頭文字' },
+      { title: '事業内容', description: '研究×商用開発、スポーツ・ヘルスケア、AIソリューション' },
     ]}
   >
     <Fragment slot="bg">
